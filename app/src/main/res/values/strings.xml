@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TrivTix</string>
+    <string name="selogan">Pesan Tiket Jadi Lebih Mudah</string>
+    <string name="signin">SIGN IN</string>
+    <string name="newaccount">NEW ACCOUNT"</string>
+    <string name="username_label">Username</string>
+    <string name="password_label">Password</string>
+    <string name="createnewaccount">Create New Account</string>
+</resources>

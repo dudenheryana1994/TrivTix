@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#11E1E7</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="bluedarkPrimary">#3700B3</color>
+
+    <color name="toskamuda">#51DBDF</color>
+    <color name="toskaSecondary">#88EEEB</color>
+    <color name="grayPrimary">#8D8D8D</color>
+    <color name="toskaPrimary">#16C3EF</color>
+    <color name="whitePrimary">#FFF</color>
+    <color name="colorbg">#B9B9B9</color>
+    <color name="blackPrimary">#21272C</color>
+</resources>
