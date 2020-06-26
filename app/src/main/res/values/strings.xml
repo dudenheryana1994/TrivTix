@@ -5,5 +5,10 @@
     <string name="newaccount">NEW ACCOUNT"</string>
     <string name="username_label">Username</string>
     <string name="password_label">Password</string>
+    <string name="email_label">Email Address</string>
+    <string name="name_label">Name</string>
+    <string name="Bio_label">Your Passion?</string>
     <string name="createnewaccount">Create New Account</string>
+    <string name="explore">EXPLORE NOW</string>
+
 </resources>

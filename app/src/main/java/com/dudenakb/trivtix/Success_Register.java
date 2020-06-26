@@ -13,26 +13,25 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
+import android.view.View;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class Success_Register extends AppCompatActivity {
 
+    Button btn_explore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_success__register);
 
-        //setting timer untuk 1 detik
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        btn_explore = findViewById(R.id.btn_explore);
+        btn_explore.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                //berpindah activity ke activity selanjutnya
-                Intent menuju_getstarted = new Intent(MainActivity. this, GetStarted.class);
-                startActivity(menuju_getstarted);
-                finish();
+            public void onClick(View v) {
+                Intent menuju_home = new Intent(Success_Register.this, Home.class);
+                startActivity(menuju_home);
             }
-        }, 1000); //1000 ms = 1 detik
+        });
     }
 }

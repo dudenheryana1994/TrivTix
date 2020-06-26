@@ -15,32 +15,34 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
-public class GetStarted extends AppCompatActivity {
+public class Register1 extends AppCompatActivity {
 
-    Button btn_sign_in, btn_new_account_create;
+    Button btn_continue;
+    ImageView btn_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_get_started);
+        setContentView(R.layout.activity_register1);
 
-        btn_sign_in = findViewById(R.id.btn_sign_in);
-        btn_new_account_create = findViewById(R.id.btn_new_account_create);
-
-        btn_sign_in.setOnClickListener(new View.OnClickListener() {
+        btn_continue = findViewById(R.id.btn_continue);
+        btn_continue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent menuju_sign_in = new Intent(GetStarted.this, Sign_In.class);
-                startActivity(menuju_sign_in);
+                Intent menuju_register2 = new Intent(Register1.this, Register2.class);
+                startActivity(menuju_register2);
             }
         });
 
-        btn_new_account_create.setOnClickListener(new View.OnClickListener() {
+        btn_back = findViewById(R.id.btn_back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent menuju_register1 = new Intent(GetStarted.this, Register1.class);
-                startActivity(menuju_register1);
+                Intent kembali_ke_sign_in = new Intent(Register1.this, Sign_In.class);
+                startActivity(kembali_ke_sign_in);
+
             }
         });
     }

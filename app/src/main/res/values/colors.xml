@@ -11,5 +11,7 @@
     <color name="toskaPrimary">#16C3EF</color>
     <color name="whitePrimary">#FFF</color>
     <color name="colorbg">#B9B9B9</color>
+    <color name="bgprimary">#EDF1F8</color>
     <color name="blackPrimary">#21272C</color>
+    <color name="greenPrimary">#1ABC9C</color>
 </resources>
