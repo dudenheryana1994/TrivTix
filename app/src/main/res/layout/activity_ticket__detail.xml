@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgprimary"
+    tools:context=".Ticket_Detail">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_header_suspension_bridge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+    
+    <TextView
+        android:id="@+id/title_ticket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/mregular"
+        android:text="Suspension Bridge"
+        android:textAlignment="center"
+        android:textColor="@color/whitePrimary"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/location_ticket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/mlight"
+        android:lineSpacingExtra="9dp"
+        android:text="Sukabumi, Indonesia"
+        android:textAlignment="center"
+        android:textColor="@color/whitePrimary"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_ticket"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/background_layout_white"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingTop="30dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_ticket"
+        app:layout_editor_absoluteX="16dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mregular"
+            android:text="Information"
+            android:textColor="@color/blackPrimary"
+            android:textSize="18sp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/mlight"
+            android:text="Knowing before travel"
+            android:textColor="@color/grayPrimary"
+            android:textSize="14sp"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#EDEDED" />
+
+        <LinearLayout
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <ImageView
+                android:src="@drawable/ic_photo"
+                android:layout_width="55dp"
+                android:layout_height="55dp" />
+
+            <LinearLayout
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/photo_spot_ticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mregular"
+                    android:text="Photo Spots"
+                    android:textColor="@color/blackPrimary"
+                    android:textSize="16sp"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/mlight"
+                    android:text="Photo spots everywhere"
+                    android:textColor="@color/grayPrimary"
+                    android:textSize="12sp"
+                    tools:ignore="MissingConstraints" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/ic_dance"
+                android:layout_width="55dp"
+                android:layout_height="55dp" />
+
+            <LinearLayout
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/dance_ticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mregular"
+                    android:text="Dance Festivals"
+                    android:textColor="@color/blackPrimary"
+                    android:textSize="16sp"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/mlight"
+                    android:text="Traditional Dance"
+                    android:textColor="@color/grayPrimary"
+                    android:textSize="12sp"
+                    tools:ignore="MissingConstraints" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/ic_festival_food"
+                android:layout_width="55dp"
+                android:layout_height="55dp" />
+
+            <LinearLayout
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/food_ticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mregular"
+                    android:text="Food Festivals"
+                    android:textColor="@color/blackPrimary"
+                    android:textSize="16sp"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/mlight"
+                    android:text="Sundanese Food"
+                    android:textColor="@color/grayPrimary"
+                    android:textSize="12sp"
+                    tools:ignore="MissingConstraints" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/short_desc_ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/mlight"
+            android:lineSpacingExtra="4dp"
+            android:text="This suspension bridge has a length of \n243 metersand is at the height of a cliff \nreach 161 meters"
+            android:textColor="@color/grayPrimary"
+            android:textSize="12sp"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_buy_ticket"
+        android:layout_width="230dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/background_btn_primary"
+        android:fontFamily="@font/mregular"
+        android:text="BUY TICKET"
+        android:textColor="@color/whitePrimary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintEnd_toStartOf="@+id/btn_continue"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

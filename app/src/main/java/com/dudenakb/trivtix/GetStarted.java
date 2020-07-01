@@ -9,6 +9,9 @@ package com.dudenakb.trivtix;
 //Tanggal Pengerjaan : 26 Juni 2020
 //Deskripsi Pengerjaan :Membuat Register1, Register2, Success_Register dan Home
 
+//Tanggal Pengerjaan : 01 Juli 2020
+//Deskripsi Pengerjaan :Membuat Ticket Destail, Ticket CheckOut dan Success Buy Ticket
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;

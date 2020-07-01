@@ -132,7 +132,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/mregular"
                     android:text="Main Menus"
-                    android:textColor="@color/toskamuda"
+                    android:textColor="@color/blackPrimary"
                     android:textSize="18sp"
                     tools:ignore="MissingConstraints" />
 
@@ -142,7 +142,7 @@
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/mlight"
                     android:text="Explore the natural beauty of Situgunung"
-                    android:textColor="@color/toskamuda"
+                    android:textColor="@color/grayPrimary"
                     android:textSize="14sp"
                     tools:ignore="MissingConstraints" />
 
@@ -160,6 +160,7 @@
                     android:weightSum="3">
 
                     <LinearLayout
+                        android:id="@+id/btn_ticket_bridge"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -169,7 +170,7 @@
                         <ImageView
                             android:layout_width="64dp"
                             android:layout_height="64dp"
-                            android:src="@drawable/ic_suspension_bridge"
+                            android:src="@drawable/ic_bridge"
                             tools:ignore="MissingConstraints" />
 
                         <TextView
@@ -177,8 +178,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:fontFamily="@font/mregular"
-                            android:text="Suspension \nBridge"
-                            android:textColor="@color/toskaPrimary"
+                            android:text="Bridge"
+                            android:textColor="@color/blackPrimary"
                             android:textSize="14sp"
                             tools:ignore="MissingConstraints" />
 
@@ -203,7 +204,7 @@
                             android:layout_marginTop="4dp"
                             android:fontFamily="@font/mregular"
                             android:text="Waterfall"
-                            android:textColor="@color/toskaPrimary"
+                            android:textColor="@color/blackPrimary"
                             android:textSize="14sp"
                             tools:ignore="MissingConstraints" />
 
@@ -228,7 +229,7 @@
                             android:layout_marginTop="4dp"
                             android:fontFamily="@font/mregular"
                             android:text="Lake"
-                            android:textColor="@color/toskaPrimary"
+                            android:textColor="@color/blackPrimary"
                             android:textSize="14sp"
                             tools:ignore="MissingConstraints" />
 

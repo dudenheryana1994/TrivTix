@@ -18,34 +18,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 
-public class Register1 extends AppCompatActivity {
+public class Ticket_Detail extends AppCompatActivity {
 
-    Button btn_continue;
-    ImageView btn_back;
+    Button btn_buy_ticket;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register1);
+        setContentView(R.layout.activity_ticket__detail);
 
-        btn_continue = findViewById(R.id.btn_continue);
-        btn_continue.setOnClickListener(new View.OnClickListener() {
+        btn_buy_ticket = findViewById(R.id.btn_buy_ticket);
+
+        btn_buy_ticket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent menuju_register2 = new Intent(Register1.this, Register2.class);
-                startActivity(menuju_register2);
-            }
-        });
-
-        btn_back = findViewById(R.id.btn_back);
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent kembali_ke_sign_in = new Intent(Register1.this, Sign_In.class);
-                startActivity(kembali_ke_sign_in);
-
+                Intent menuju_ticket_ceck_out = new Intent(Ticket_Detail.this, Ticket_Check_Out.class);
+                startActivity(menuju_ticket_ceck_out);
             }
         });
     }

@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Home"></activity>
+        <activity android:name=".Success_Buy_Ticket"></activity>
+        <activity android:name=".Ticket_Check_Out" />
+        <activity android:name=".Ticket_Detail" />
+        <activity android:name=".Home" />
         <activity android:name=".Success_Register" />
         <activity android:name=".Register2" />
         <activity android:name=".Register1" />
