@@ -22,23 +22,34 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
-public class Ticket_Detail extends AppCompatActivity {
+public class MyProfile extends AppCompatActivity {
 
-    Button btn_buy_ticket;
+    LinearLayout item_my_ticket;
+    Button btn_edit_profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ticket__detail);
+        setContentView(R.layout.activity_my_profile);
 
-        btn_buy_ticket = findViewById(R.id.btn_buy_ticket);
+        item_my_ticket = findViewById(R.id.item_my_ticket);
+        btn_edit_profile = findViewById(R.id.btn_edit_profile);
 
-        btn_buy_ticket.setOnClickListener(new View.OnClickListener() {
+        item_my_ticket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent menuju_ticket_ceck_out = new Intent(Ticket_Detail.this, Ticket_Check_Out.class);
-                startActivity(menuju_ticket_ceck_out);
+                Intent menuju_MyProfile_detail = new Intent(MyProfile.this, MyTicket_Detail.class);
+                startActivity(menuju_MyProfile_detail);
+            }
+        });
+
+        btn_edit_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent menuju_edit_profile = new Intent(MyProfile.this, Edit_Profile.class);
+                startActivity(menuju_edit_profile);
             }
         });
     }

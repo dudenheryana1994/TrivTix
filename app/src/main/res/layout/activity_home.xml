@@ -61,15 +61,24 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView2"
                 tools:ignore="MissingConstraints" />
 
-            <ImageView
+            <com.github.florent37.shapeofview.shapes.CircleView
+                android:id="@+id/btn_to_profile"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="29dp"
-                android:layout_marginTop="29dp"
-                android:src="@drawable/picture_circle"
+                android:layout_marginTop="92dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textView2"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/photo_home_user"
+                    android:src="@drawable/ic_duden1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    tools:ignore="MissingConstraints" />
+
+            </com.github.florent37.shapeofview.shapes.CircleView>
 
             <TextView
                 android:id="@+id/textView3"
@@ -131,7 +140,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/mregular"
-                    android:text="Main Menus"
+                    android:text="Menu Utama"
                     android:textColor="@color/blackPrimary"
                     android:textSize="18sp"
                     tools:ignore="MissingConstraints" />
@@ -141,7 +150,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/mlight"
-                    android:text="Explore the natural beauty of Situgunung"
+                    android:text="Jelajahi keindahan alam Situgunung"
                     android:textColor="@color/grayPrimary"
                     android:textSize="14sp"
                     tools:ignore="MissingConstraints" />
@@ -247,7 +256,7 @@
                 android:layout_marginTop="30dp"
                 android:fontFamily="@font/mregular"
                 android:text="TicketTips"
-                android:textColor="@color/toskamuda"
+                android:textColor="@color/blackPrimary"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
@@ -260,8 +269,8 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/mlight"
-                android:text="Learn it for many benefits"
-                android:textColor="@color/toskamuda"
+                android:text="Pelajari lebih banyak manfaatnya"
+                android:textColor="@color/grayPrimary"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView5"

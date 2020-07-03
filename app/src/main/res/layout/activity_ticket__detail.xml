@@ -78,7 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/mregular"
-            android:text="Information"
+            android:text="Informasi"
             android:textColor="@color/blackPrimary"
             android:textSize="18sp"
             tools:ignore="MissingConstraints" />
@@ -88,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/mlight"
-            android:text="Knowing before travel"
+            android:text="Mengetahui sebelum masuk wisata"
             android:textColor="@color/grayPrimary"
             android:textSize="14sp"
             tools:ignore="MissingConstraints" />
@@ -123,7 +123,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/mregular"
-                    android:text="Photo Spots"
+                    android:text="Tempat Foto"
                     android:textColor="@color/blackPrimary"
                     android:textSize="16sp"
                     tools:ignore="MissingConstraints" />
@@ -133,7 +133,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/mlight"
-                    android:text="Photo spots everywhere"
+                    android:text="Spot foto dimana-mana"
                     android:textColor="@color/grayPrimary"
                     android:textSize="12sp"
                     tools:ignore="MissingConstraints" />
@@ -165,7 +165,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/mregular"
-                    android:text="Dance Festivals"
+                    android:text="Festival Tari"
                     android:textColor="@color/blackPrimary"
                     android:textSize="16sp"
                     tools:ignore="MissingConstraints" />
@@ -175,7 +175,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/mlight"
-                    android:text="Traditional Dance"
+                    android:text="Tari Tradisional"
                     android:textColor="@color/grayPrimary"
                     android:textSize="12sp"
                     tools:ignore="MissingConstraints" />
@@ -207,7 +207,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/mregular"
-                    android:text="Food Festivals"
+                    android:text="Festival Makanan"
                     android:textColor="@color/blackPrimary"
                     android:textSize="16sp"
                     tools:ignore="MissingConstraints" />
@@ -217,7 +217,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/mlight"
-                    android:text="Sundanese Food"
+                    android:text="Makan Khas Sunda"
                     android:textColor="@color/grayPrimary"
                     android:textSize="12sp"
                     tools:ignore="MissingConstraints" />
@@ -233,7 +233,7 @@
             android:layout_marginTop="4dp"
             android:fontFamily="@font/mlight"
             android:lineSpacingExtra="4dp"
-            android:text="This suspension bridge has a length of \n243 metersand is at the height of a cliff \nreach 161 meters"
+            android:text="Jembatan gantung ini memiliki panjang \n243 meter dan pada ketinggian tebing \nmencapai 161 meter"
             android:textColor="@color/grayPrimary"
             android:textSize="12sp"
             tools:ignore="MissingConstraints" />
