@@ -16,6 +16,9 @@ package com.dudenakb.trivtix;
 //Tanggal Pengerjaan : 03 Juli 2020
 //Deskripsi Pengerjaan : Membuat My Ticket Detail, Success By Ticket dan Edit Profile
 
+//Tanggal Pengerjaan : 09 Juli 2020
+//Deskripsi Pengerjaan : Sudah ada Database
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;

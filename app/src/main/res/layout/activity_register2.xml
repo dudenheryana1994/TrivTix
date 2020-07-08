@@ -87,6 +87,7 @@
                 android:textSize="18sp" />
 
             <EditText
+                android:id="@+id/nama_lengkap"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/background_input_edit"
@@ -115,6 +116,7 @@
                 android:textSize="18sp" />
 
             <EditText
+                android:id="@+id/hobby"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/background_input_edit"
@@ -175,6 +177,7 @@
     </com.github.florent37.shapeofview.shapes.CircleView>
 
     <ImageView
+        android:id="@+id/btn_add_photo"
         android:src="@drawable/ic_plus_pic"
         android:layout_width="35dp"
         android:layout_height="35dp"

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "125504807383",
+    "firebase_url": "https://trivtix-b75d6.firebaseio.com",
+    "project_id": "trivtix-b75d6",
+    "storage_bucket": "trivtix-b75d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125504807383:android:7e1e3ace697cb1df4deb92",
+        "android_client_info": {
+          "package_name": "com.dudenakb.trivtix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125504807383-lb3a4vigqlk45efp423sk380bvq6u8hg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dudenakb.trivtix",
+            "certificate_hash": "63a26d5dc2af3a75ac079ffcb017099a3d26d3fc"
+          }
+        },
+        {
+          "client_id": "125504807383-6b04ivk7iphs2agkrpm1a48tvhhlh8jf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyas0wsDY2m-XZ0YjcVbJ_WJGSUQR6rVs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125504807383-6b04ivk7iphs2agkrpm1a48tvhhlh8jf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

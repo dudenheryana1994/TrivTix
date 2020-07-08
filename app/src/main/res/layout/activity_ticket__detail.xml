@@ -8,13 +8,13 @@
     tools:context=".Ticket_Detail">
 
     <ImageView
+        android:id="@+id/header_ticket_detail"
         android:layout_width="match_parent"
         android:layout_height="210dp"
         android:layout_marginEnd="0dp"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/bg_header_suspension_bridge"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -28,7 +28,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/mregular"
-        android:text="Suspension Bridge"
         android:textAlignment="center"
         android:textColor="@color/whitePrimary"
         android:textSize="24dp"
@@ -233,7 +232,6 @@
             android:layout_marginTop="4dp"
             android:fontFamily="@font/mlight"
             android:lineSpacingExtra="4dp"
-            android:text="Jembatan gantung ini memiliki panjang \n243 meter dan pada ketinggian tebing \nmencapai 161 meter"
             android:textColor="@color/grayPrimary"
             android:textSize="12sp"
             tools:ignore="MissingConstraints" />
