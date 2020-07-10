@@ -19,9 +19,14 @@ package com.dudenakb.trivtix;
 //Tanggal Pengerjaan : 09 Juli 2020
 //Deskripsi Pengerjaan : Sudah ada Database
 
+//Tanggal Pengerjaan : 11 Juli 2020
+//Deskripsi Pengerjaan : Firebase Tiket CekOut, memberikan validasi login & sisa saldo
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -59,5 +64,21 @@ public class Success_Buy_Ticket extends AppCompatActivity {
 
         btn_view_ticket.startAnimation(btt);
         btn_my_dashboard.startAnimation(btt);
+
+        btn_view_ticket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent menuju_MyProfile = new Intent(Success_Buy_Ticket.this, MyProfile.class);
+                startActivity(menuju_MyProfile);
+            }
+        });
+
+        btn_my_dashboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent menuju_home = new Intent(Success_Buy_Ticket.this, Home.class);
+                startActivity(menuju_home);
+            }
+        });
     }
 }

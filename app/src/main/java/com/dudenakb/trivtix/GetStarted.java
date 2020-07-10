@@ -19,6 +19,9 @@ package com.dudenakb.trivtix;
 //Tanggal Pengerjaan : 09 Juli 2020
 //Deskripsi Pengerjaan : Sudah ada Database
 
+//Tanggal Pengerjaan : 11 Juli 2020
+//Deskripsi Pengerjaan : Firebase Tiket CekOut, memberikan validasi login & sisa saldo
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;

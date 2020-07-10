@@ -19,6 +19,9 @@ package com.dudenakb.trivtix;
 //Tanggal Pengerjaan : 09 Juli 2020
 //Deskripsi Pengerjaan : Sudah ada Database
 
+//Tanggal Pengerjaan : 11 Juli 2020
+//Deskripsi Pengerjaan : Firebase Tiket CekOut, memberikan validasi login & sisa saldo
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -90,6 +93,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent menuju_ticket_detail = new Intent(Home.this, Ticket_Detail.class);
+                //meletakan data kepada intent
                 menuju_ticket_detail.putExtra("jenis_tiket", "Bridge");
                 startActivity(menuju_ticket_detail);
             }
@@ -99,7 +103,6 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent menuju_ticket_detail = new Intent(Home.this, Ticket_Detail.class);
-                //meletakan data kepada intent
                 menuju_ticket_detail.putExtra("jenis_tiket", "Waterfall");
                 startActivity(menuju_ticket_detail);
             }

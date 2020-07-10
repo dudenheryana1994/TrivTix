@@ -19,6 +19,9 @@ package com.dudenakb.trivtix;
 //Tanggal Pengerjaan : 09 Juli 2020
 //Deskripsi Pengerjaan : Sudah ada Database
 
+//Tanggal Pengerjaan : 11 Juli 2020
+//Deskripsi Pengerjaan : Firebase Tiket CekOut, memberikan validasi login & sisa saldo
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -75,45 +78,67 @@ public class Sign_In extends AppCompatActivity {
                 final String username = username_sign_in.getText().toString();
                 final String password = password_sign_in.getText().toString();
 
-                reference = FirebaseDatabase.getInstance().getReference().child("Users").child(username);
-
-                reference.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.exists()){
-
-                            //mengambil data password dari firebase
-                            String passwordFromFirebase = dataSnapshot.child("password").getValue().toString();
-
-                            //validasi password dengan password firebase
-                            if (password.equals(passwordFromFirebase)){
-
-                                //simpan username key kapada local
-                                SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
-                                SharedPreferences.Editor editor = sharedPreferences.edit();
-                                editor.putString(username_key, username_sign_in.getText().toString());
-                                editor.apply();
-
-                                //berpindah activity
-                                Intent menuju_home = new Intent(Sign_In.this, Home.class);
-                                startActivity(menuju_home);
-                            }
-                            else {
-                                Toast.makeText(getApplicationContext(), "Password Salah!", Toast.LENGTH_SHORT).show();
-                            }
-
-                        }
-                        else {
-                            Toast.makeText(getApplicationContext(), "Username Salah!", Toast.LENGTH_SHORT).show();
-                        }
+                if (username.isEmpty()){
+                    Toast.makeText(getApplicationContext(), "username tidak boleh kosong !", Toast.LENGTH_SHORT).show();
+                    //merubah state
+                    btn_sign_in.setEnabled(true);
+                    btn_sign_in.setText("SIGN IN");
+                }
+                else {
+                    if (password.isEmpty()) {
+                        Toast.makeText(getApplicationContext(), "Password tidak boleh kosong !", Toast.LENGTH_SHORT).show();
+                        //merubah state
+                        btn_sign_in.setEnabled(true);
+                        btn_sign_in.setText("SIGN IN");
                     }
+                    else {
+                        reference = FirebaseDatabase.getInstance().getReference().child("Users").child(username);
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-                        Toast.makeText(getApplicationContext(), "Database Error!", Toast.LENGTH_SHORT).show();
+                        reference.addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                if (dataSnapshot.exists()){
 
+                                    //mengambil data password dari firebase
+                                    String passwordFromFirebase = dataSnapshot.child("password").getValue().toString();
+
+                                    //validasi password dengan password firebase
+                                    if (password.equals(passwordFromFirebase)){
+
+                                        //simpan username key kapada local
+                                        SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
+                                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                                        editor.putString(username_key, username_sign_in.getText().toString());
+                                        editor.apply();
+
+                                        //berpindah activity
+                                        Intent menuju_home = new Intent(Sign_In.this, Home.class);
+                                        startActivity(menuju_home);
+                                    }
+                                    else {
+                                        Toast.makeText(getApplicationContext(), "Password Salah!", Toast.LENGTH_SHORT).show();
+                                        //merubah state
+                                        btn_sign_in.setEnabled(true);
+                                        btn_sign_in.setText("SIGN IN");
+                                    }
+
+                                }
+                                else {
+                                    Toast.makeText(getApplicationContext(), "Username Salah!", Toast.LENGTH_SHORT).show();
+                                    //merubah state
+                                    btn_sign_in.setEnabled(true);
+                                    btn_sign_in.setText("SIGN IN");
+                                }
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                                Toast.makeText(getApplicationContext(), "Database Error!", Toast.LENGTH_SHORT).show();
+
+                            }
+                        });
                     }
-                });
+                }
             }
         });
     }
