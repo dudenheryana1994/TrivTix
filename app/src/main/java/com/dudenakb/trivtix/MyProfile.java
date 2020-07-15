@@ -17,13 +17,18 @@ package com.dudenakb.trivtix;
 //Deskripsi Pengerjaan : Membuat My Ticket Detail, Success By Ticket dan Edit Profile
 
 //Tanggal Pengerjaan : 09 Juli 2020
-//Deskripsi Pengerjaan : Sudah ada Database
+//Deskripsi Pengerjaan : Firebase user register 1 dan 2, user login, integrasi home, integrasi tiket detail
 
 //Tanggal Pengerjaan : 11 Juli 2020
 //Deskripsi Pengerjaan : Firebase Tiket CekOut, memberikan validasi login & sisa saldo
 
+//tanggal Pengerjaan : 13 Juli 2020
+//Deskripsi Pengerjaan : Firebase My profile, My tiket detail
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -41,6 +46,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+
 public class MyProfile extends AppCompatActivity {
 
     LinearLayout item_my_ticket;
@@ -52,7 +59,11 @@ public class MyProfile extends AppCompatActivity {
     String username_key = "";
     String getUsername_key_new = "";
 
-    DatabaseReference reference;
+    DatabaseReference reference, reference2;
+
+    RecyclerView myticket_place;
+    ArrayList<MyTicket> list;
+    TicketAdapter ticketAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +77,10 @@ public class MyProfile extends AppCompatActivity {
         photo_profile = findViewById(R.id.photo_profile);
         nama_lengkap = findViewById(R.id.nama_lengkap);
         hobby = findViewById(R.id.hobby);
+
+        myticket_place = findViewById(R.id.myticket_place);
+        myticket_place.setLayoutManager(new LinearLayoutManager(this));
+        list = new ArrayList<MyTicket>();
 
         reference = FirebaseDatabase.getInstance().getReference().child("Users").child(getUsername_key_new);
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -82,19 +97,29 @@ public class MyProfile extends AppCompatActivity {
             }
         });
 
-        item_my_ticket.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent menuju_MyProfile_detail = new Intent(MyProfile.this, MyTicket_Detail.class);
-                startActivity(menuju_MyProfile_detail);
-            }
-        });
-
         btn_edit_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent menuju_edit_profile = new Intent(MyProfile.this, Edit_Profile.class);
                 startActivity(menuju_edit_profile);
+            }
+        });
+
+        reference2 = FirebaseDatabase.getInstance().getReference().child("MyTiket").child(getUsername_key_new);
+        reference2.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot dataSnapshot1: dataSnapshot.getChildren()){
+                    MyTicket p = dataSnapshot1.getValue(MyTicket.class);
+                    list.add(p);
+                }
+                ticketAdapter = new TicketAdapter(MyProfile.this, list);
+                myticket_place.setAdapter(ticketAdapter);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
             }
         });
     }

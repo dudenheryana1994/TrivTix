@@ -65,49 +65,30 @@
                 android:src="@drawable/ic_ticket_buy" />
 
             <LinearLayout
-                android:layout_width="120dp"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="12dp"
                 android:layout_marginTop="6dp"
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/xnama_wisata"
                     android:layout_width="wrap_content"
                     android:layout_height="28dp"
                     android:fontFamily="@font/mregular"
-                    android:text="Bridge"
                     android:textColor="@color/blackPrimary"
                     android:textSize="18sp"
                     tools:ignore="MissingConstraints" />
 
                 <TextView
+                    android:id="@+id/xlokasi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
                     android:fontFamily="@font/mlight"
-                    android:text="Sukabumi"
                     android:textColor="@color/grayPrimary"
                     android:textSize="12sp"
                     tools:ignore="MissingConstraints" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="17dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="14dp"
-                    android:layout_marginRight="14dp"
-                    android:fontFamily="@font/mlight"
-                    android:text="2 Tickets"
-                    android:textColor="@color/toskaPrimary"
-                    android:textSize="14dp" />
 
             </LinearLayout>
 
@@ -136,11 +117,11 @@
                 tools:ignore="MissingConstraints" />
 
             <TextView
+                android:id="@+id/xtanggal_wisata"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/mlight"
-                android:text="Juli 03, 2020"
                 android:textColor="@color/grayPrimary"
                 android:textSize="14sp"
                 tools:ignore="MissingConstraints" />
@@ -163,11 +144,11 @@
                 tools:ignore="MissingConstraints" />
 
             <TextView
+                android:id="@+id/xwaktu_wisata"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/mlight"
-                android:text="07AM - 17PM"
                 android:textColor="@color/grayPrimary"
                 android:textSize="14sp"
                 tools:ignore="MissingConstraints" />
@@ -190,11 +171,11 @@
                 tools:ignore="MissingConstraints" />
 
             <TextView
+                android:id="@+id/xketentuan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/mlight"
-                android:text="Anak yang berumur lebih dari 3 tahun \nwajib membeli tiket untuk masuk \nkedalam landmark"
                 android:textColor="@color/grayPrimary"
                 android:textSize="12sp"
                 tools:ignore="MissingConstraints" />

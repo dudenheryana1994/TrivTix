@@ -126,127 +126,12 @@
             android:layout_marginBottom="16dp"
             android:background="#EDEDED" />
 
-        <LinearLayout
-         android:id="@+id/item_my_ticket"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:src="@drawable/ic_ticket_buy" />
-
-        <LinearLayout
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="6dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/food_ticket"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mregular"
-                android:text="Bridge"
-                android:textColor="@color/blackPrimary"
-                android:textSize="18sp"
-                tools:ignore="MissingConstraints" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/mlight"
-                android:text="Sukabumi"
-                android:textColor="@color/grayPrimary"
-                android:textSize="12sp"
-                tools:ignore="MissingConstraints" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="17dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="14dp"
-                android:layout_marginRight="14dp"
-                android:fontFamily="@font/mlight"
-                android:text="2 Tiket"
-                android:textColor="@color/toskaPrimary"
-                android:textSize="14dp" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/myticket_place"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal">
+            android:layout_height="145dp">
+        </androidx.recyclerview.widget.RecyclerView>
 
-            <ImageView
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:src="@drawable/ic_ticket_buy" />
-
-            <LinearLayout
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:layout_marginTop="6dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/mregular"
-                    android:text="Waterfall"
-                    android:textColor="@color/blackPrimary"
-                    android:textSize="18sp"
-                    tools:ignore="MissingConstraints" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/mlight"
-                    android:text="Sukabumi"
-                    android:textColor="@color/grayPrimary"
-                    android:textSize="12sp"
-                    tools:ignore="MissingConstraints" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="17dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="14dp"
-                    android:layout_marginRight="14dp"
-                    android:fontFamily="@font/mlight"
-                    android:text="4 Tiket"
-                    android:textColor="@color/toskaPrimary"
-                    android:textSize="14dp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
 
     </LinearLayout>
 
@@ -283,6 +168,17 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_edit_profile"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/btn_back_home"
+        android:src="@drawable/ic_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

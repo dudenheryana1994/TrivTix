@@ -17,10 +17,13 @@ package com.dudenakb.trivtix;
 //Deskripsi Pengerjaan : Membuat My Ticket Detail, Success By Ticket dan Edit Profile
 
 //Tanggal Pengerjaan : 09 Juli 2020
-//Deskripsi Pengerjaan : Sudah ada Database
+//Deskripsi Pengerjaan : Firebase user register 1 dan 2, user login, integrasi home, integrasi tiket detail
 
 //Tanggal Pengerjaan : 11 Juli 2020
 //Deskripsi Pengerjaan : Firebase Tiket CekOut, memberikan validasi login & sisa saldo
+
+//tanggal Pengerjaan : 13 Juli 2020
+//Deskripsi Pengerjaan : Firebase My profile, My tiket detail
 
 import androidx.appcompat.app.AppCompatActivity;
 
