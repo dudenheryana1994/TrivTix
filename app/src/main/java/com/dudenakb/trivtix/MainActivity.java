@@ -25,11 +25,18 @@ package com.dudenakb.trivtix;
 //tanggal Pengerjaan : 13 Juli 2020
 //Deskripsi Pengerjaan : Firebase My profile, My tiket detail
 
+//tanggal Pengerjaan : 15 Juli 2020
+//Deskripsi Pengerjaan : Firebase Edit Profile
+
+//tanggal pengerjaan : 17 Juli 2020
+//Deskripsi : Firebase Sign Out
+
 
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.animation.Animation;
@@ -42,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
     Animation app_splash, btt;
     ImageView app_logo;
     TextView app_sub_title;
+
+    String USERNAME_KEY = "usernamekey";
+    String username_key = "";
+    String getUsername_key_new = "";
 
 
     @Override
@@ -61,16 +72,39 @@ public class MainActivity extends AppCompatActivity {
         app_logo.startAnimation(app_splash);
         app_sub_title.startAnimation(btt);
 
-        //setting timer untuk 2 detik
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                //berpindah activity ke activity selanjutnya
-                Intent menuju_getstarted = new Intent(MainActivity. this, GetStarted.class);
-                startActivity(menuju_getstarted);
-                finish();
-            }
-        }, 2000); //2000 ms = 2 detik
+        getUsernameLocal();
+
+    }
+
+    public void getUsernameLocal(){
+        SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
+        getUsername_key_new = sharedPreferences.getString(username_key, "");
+        if (getUsername_key_new.isEmpty()){
+            //setting timer untuk 2 detik
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    //berpindah activity ke activity selanjutnya
+                    Intent menuju_getstarted = new Intent(MainActivity. this, GetStarted.class);
+                    startActivity(menuju_getstarted);
+                    finish();
+                }
+            }, 2000); //2000 ms = 2 detik
+
+        }
+        else {
+            //setting timer untuk 2 detik
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    //berpindah activity ke activity selanjutnya
+                    Intent menuju_home = new Intent(MainActivity. this, Home.class);
+                    startActivity(menuju_home);
+                    finish();
+                }
+            }, 2000); //2000 ms = 2 detik
+        }
     }
 }

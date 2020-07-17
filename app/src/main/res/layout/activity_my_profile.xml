@@ -172,11 +172,11 @@
 
     <ImageView
         android:id="@+id/btn_back_home"
-        android:src="@drawable/ic_back"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />

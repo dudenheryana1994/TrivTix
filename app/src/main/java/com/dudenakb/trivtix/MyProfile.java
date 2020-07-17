@@ -25,6 +25,12 @@ package com.dudenakb.trivtix;
 //tanggal Pengerjaan : 13 Juli 2020
 //Deskripsi Pengerjaan : Firebase My profile, My tiket detail
 
+//tanggal Pengerjaan : 15 Juli 2020
+//Deskripsi Pengerjaan : Firebase Edit Profile
+
+//tanggal pengerjaan : 17 Juli 2020
+//Deskripsi : Firebase Sign Out
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -51,8 +57,8 @@ import java.util.ArrayList;
 public class MyProfile extends AppCompatActivity {
 
     LinearLayout item_my_ticket;
-    Button btn_edit_profile;
-    ImageView photo_profile;
+    Button btn_edit_profile, btn_sign_out;
+    ImageView photo_profile, btn_back_home;
     TextView nama_lengkap, hobby;
 
     String USERNAME_KEY = "usernamekey";
@@ -74,6 +80,8 @@ public class MyProfile extends AppCompatActivity {
 
         item_my_ticket = findViewById(R.id.item_my_ticket);
         btn_edit_profile = findViewById(R.id.btn_edit_profile);
+        btn_sign_out = findViewById(R.id.btn_sign_out);
+        btn_back_home = findViewById(R.id.btn_back_home);
         photo_profile = findViewById(R.id.photo_profile);
         nama_lengkap = findViewById(R.id.nama_lengkap);
         hobby = findViewById(R.id.hobby);
@@ -122,6 +130,33 @@ public class MyProfile extends AppCompatActivity {
 
             }
         });
+
+        btn_back_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //berpindah activity
+                Intent kembali_ke_home = new Intent(MyProfile.this, Home.class);
+                startActivity(kembali_ke_home);
+            }
+        });
+
+        btn_sign_out.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //menghapus isi/nilai/value dari username local
+                SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString(username_key, null);
+                editor.apply();
+
+                //berpindah activity
+                Intent kembali_ke_sign_in = new Intent(MyProfile.this, Sign_In.class);
+                startActivity(kembali_ke_sign_in);
+                finish();
+
+            }
+        });
+
     }
 
     public void getUsernameLocal(){

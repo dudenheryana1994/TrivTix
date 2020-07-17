@@ -25,6 +25,12 @@ package com.dudenakb.trivtix;
 //tanggal Pengerjaan : 13 Juli 2020
 //Deskripsi Pengerjaan : Firebase My profile, My tiket detail
 
+//tanggal Pengerjaan : 15 Juli 2020
+//Deskripsi Pengerjaan : Firebase Edit Profile
+
+//tanggal pengerjaan : 17 Juli 2020
+//Deskripsi : Firebase Sign Out
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;

@@ -26,17 +26,22 @@ package com.dudenakb.trivtix;
 //Deskripsi Pengerjaan : Firebase My profile, My tiket detail
 
 //tanggal Pengerjaan : 15 Juli 2020
-//Deskripsi Pengerjaan : Firebase Edit Profile belum beres semua
+//Deskripsi Pengerjaan : Firebase Edit Profile
+
+//tanggal pengerjaan : 17 Juli 2020
+//Deskripsi : Firebase Sign Out
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -116,7 +121,12 @@ public class Edit_Profile extends AppCompatActivity {
 
         btn_save_profile.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(final View v) {
+
+                //ubah state menjadi loading
+                btn_save_profile.setEnabled(false);
+                btn_save_profile.setText("loading ...");
+
                 reference.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -131,17 +141,63 @@ public class Edit_Profile extends AppCompatActivity {
                     public void onCancelled(@NonNull DatabaseError databaseError) {
                     }
                 });
+
+                //validasi untuk file
+                if (photo_location != null){
+                    final StorageReference storageReference1 = storage.child(System.currentTimeMillis() + "." + getFileExtention(photo_location));
+                    storageReference1.putFile(photo_location).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+                            storageReference1.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+                                    String uri_photo = uri.toString();
+                                    reference.getRef().child("url_photo_profile").setValue(uri_photo);
+
+                                }
+                            }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Uri> task) {
+                                    //berpindah activity
+                                    Intent kembali_MyProfile = new Intent(Edit_Profile.this, MyProfile.class);
+                                    startActivity(kembali_MyProfile);
+                                }
+                            });
+
+                        }
+                    }).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+
+                        }
+                    });
+                }
+
+            }
+        });
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 //berpindah activity
                 Intent kembali_MyProfile = new Intent(Edit_Profile.this, MyProfile.class);
                 startActivity(kembali_MyProfile);
             }
         });
+
         btn_photo_baru.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 findPhoto();
             }
         });
+    }
+
+    String getFileExtention(Uri uri) {
+        ContentResolver contentResolver = getContentResolver();
+        MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
+        return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
     }
 
     public void findPhoto(){
@@ -168,3 +224,4 @@ public class Edit_Profile extends AppCompatActivity {
         getsername_key_new = sharedPreferences.getString(username_key, "");
     }
 }
+
