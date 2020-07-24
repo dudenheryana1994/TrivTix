@@ -60,7 +60,7 @@ public class Ticket_Check_Out extends AppCompatActivity {
     Integer saldo = 0;
     Integer valuetotalharga = 0;
     Integer valuehargatiket = 0;
-    ImageView notice_uang, btn_back;
+    ImageView notice_uang;
     Integer sisa_saldo = 0;
 
     DatabaseReference reference, reference2, reference3, reference4;
@@ -89,7 +89,6 @@ public class Ticket_Check_Out extends AppCompatActivity {
         btn_minus = findViewById(R.id.btn_minus);
         btn_plus = findViewById(R.id.btn_plus);
         text_jumlah_tiket = findViewById(R.id.text_jumlah_tiket);
-        btn_back = findViewById(R.id.btn_back);
         btn_buy_ticket = findViewById(R.id.btn_buy_ticket);
         notice_uang = findViewById(R.id.notice_uang);
         nama_wisata = findViewById(R.id.nama_wisata);
@@ -220,7 +219,7 @@ public class Ticket_Check_Out extends AppCompatActivity {
 
                     }
                 });
-                
+
                 //update data saldo kepada users yang saat ini login
                 //mengambil data user dari firebase
                 reference4 = FirebaseDatabase.getInstance().getReference().child("Users").child(getUsername_key_new);
@@ -238,6 +237,7 @@ public class Ticket_Check_Out extends AppCompatActivity {
                 });
             }
         });
+
     }
 
     public void getUsernameLocal(){
